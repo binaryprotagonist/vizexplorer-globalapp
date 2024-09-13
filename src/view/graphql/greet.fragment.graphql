@@ -1,0 +1,114 @@
+fragment GreetRuleSpecialTrigger on PdGreetRuleSpecialTrigger {
+  type
+  specialValue: value {
+    includeAll
+    valuesIn
+  }
+}
+
+fragment GreetMetricDefinition on PdGreetMetricDefinition {
+  code
+  label
+  valueType
+}
+
+fragment GreetRuleMetricTrigger on PdGreetRuleMetricTrigger {
+  metric {
+    ...GreetMetricDefinition
+  }
+  metricValue: value
+  operator
+}
+
+fragment GreetRuleGroupAssignment on PdGreetRuleGroupAssignment {
+  assignmentToType
+  userGroup {
+    id
+    name
+  }
+}
+
+fragment GreetRuleAssignment on PdGreetRuleAssignment {
+  id
+  weight
+  assignTo {
+    ...GreetRuleGroupAssignment
+  }
+  overflowAssignment {
+    ...GreetRuleGroupAssignment
+  }
+  overflowAssignment2 {
+    ...GreetRuleGroupAssignment
+  }
+}
+
+fragment GreetRule on PdGreetRule {
+  id
+  name
+  priority
+  isEnabled
+  isIgnoreSuppression
+  site {
+    id: idV2
+    name
+  }
+  triggers {
+    ... on PdGreetRuleSpecialTrigger {
+      ...GreetRuleSpecialTrigger
+    }
+
+    ... on PdGreetRuleMetricTrigger {
+      ...GreetRuleMetricTrigger
+    }
+  }
+  assignment {
+    ...GreetRuleAssignment
+  }
+}
+
+fragment GreetSection on PdGreetSection {
+  section
+}
+
+fragment GreetReportConfig on PdGreetReportConfig {
+  enabled
+  emailRecipients
+}
+
+fragment GreetSuppressionDays on PdGreetSuppressionDays {
+  coded
+  uncoded
+}
+
+fragment GreetTimeout on PdGreetTimeout {
+  hours
+  minutes
+}
+
+fragment GreetSettings on PdGreetSettings {
+  id
+  guestReportBanned {
+    ...GreetReportConfig
+  }
+  greetSuppressionDays {
+    ...GreetSuppressionDays
+  }
+  greetQueueInactiveTimeout {
+    ...GreetTimeout
+  }
+  greetReassignmentTimeout {
+    ...GreetTimeout
+  }
+  greetAssignByPriorityScore
+  greetShowGuestActiveActions
+  hostEnableSections
+  hostAllowSuppression
+  hostMaxAssignments
+  hostMaxMissedGreets
+}
+
+fragment GreetRuleUserGroup on PdUserGroup {
+  id
+  name
+  guestInteractionType
+}

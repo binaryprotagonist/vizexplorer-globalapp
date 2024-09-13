@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Greet Rule Dialog utils convertGreetRuleToDraft converts a rule to the expected draft format 1`] = `
+{
+  "assignment": {
+    "assignTo": {
+      "assignmentToType": "SPECIFIC_USER_GROUP",
+      "userGroupId": "39",
+    },
+    "overflowGroup1": {
+      "assignmentToType": "SPECIFIC_USER_GROUP",
+      "userGroupId": "40",
+    },
+    "overflowGroup2": {
+      "assignmentToType": "SPECIFIC_USER_GROUP",
+      "userGroupId": "47",
+    },
+    "weight": 75,
+  },
+  "id": "1",
+  "isEnabled": true,
+  "isIgnoreSuppression": false,
+  "metricTriggers": [
+    {
+      "__typename": "PdGreetRuleMetricTrigger",
+      "code": "todayActualWin",
+      "operator": "RANGE",
+      "value": [
+        100,
+        200,
+      ],
+      "valueType": "NUMERIC",
+    },
+  ],
+  "name": "JL Test",
+  "siteId": "0",
+  "specialTriggers": {
+    "daysOfWeeks": [
+      "Sunday",
+      "Tuesday",
+      "Thursday",
+      "Saturday",
+    ],
+    "guestType": "ALL",
+    "sections": [
+      "01",
+      "02",
+    ],
+    "tiers": [
+      "Platinum",
+      "Gold",
+    ],
+  },
+}
+`;

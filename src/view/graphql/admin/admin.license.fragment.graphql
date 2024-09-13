@@ -1,0 +1,11 @@
+fragment OrgLicense on OrgLicense {
+  id
+  key
+  issuedAt
+  expiresAt
+  lastVerifiedAt
+  lastVerifiedVersions {
+    app
+    sisenseDataObject
+  }
+}

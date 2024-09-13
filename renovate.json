@@ -1,0 +1,75 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", ":prHourlyLimitNone"],
+  "reviewers": ["VizJonathon"],
+  "schedule": ["every weekend"],
+  "timezone": "Pacific/Auckland",
+  "rangeStrategy": "bump",
+  "hostRules": [
+    {
+      "matchHost": "https://npm.pkg.github.com",
+      "hostType": "npm",
+      "encrypted": {
+        "token": "wcFMA/xDdHCJBTolAQ/9GubuScDI4kyez/ziF3v4woFZFdm8xQQxBxeVRAQ66/z9RWLmRlaaAmwwtdY8d9jt2jyZjJDr8qvUENq7Vf0EX8k/YZmHkgWE1U8Q//3MkrfcqVExwd0E4Hf/ibLSlVk9sodUP+Jb482vebA/95qTjlpzIvstY/fsf7Vn+N5C30xne6Qarh/VoG5p76koPwdZ6mO1aqHOuOuWqz4gqjssJ+WwDopVvuodOI2zTmuIFeitQb69wP5lQnY603GGZiM455J80gqnNxEOKV3Gmnw03bPtnBV6Equyt3ebGTDQWHTXv5XCNAY7e3PVLbSKfsKPJRhztnQWxHzfPm7p9mKb3hc4vtOZxZfVM0rDnz1A8azs9L30tsVWj3TFhNodY7zpHt3DHGmE+jseEAYU8JsWN8I7vrvXUfLuQCGdFKryOLQ+bB21Yc5AKLmCyeGWA5sPb6DuvpX5Qf07C6cbcJc8EeHVTU6vHlGOtKBYlcz1Fy++xeJ+WLB2od+U7ra6FgYySPxbrni8JbMKzLK4oHob5vEuhMREsCFtp6mojl1J78iGsFwM0oe00tYeKla7p7PhxPRXcinrOyqdjDNEQIJU937H0Hbs3+EVPn8yDPttJnKz3weVE885KKmpXVleoaiMX1W/kJb21AUue+oCkrt4DQufRfP1IolqFwsQ3arG/+TSegEhCpxUoT0pNdLwehzjqJc9G56NzVgpk1cpXK7Q39eUp/s4CnSGOFqmbw5rzIqjU6Ii/uZ5WquvY5oIhaviihYCidMnRx+GlJGS5WDV7UqMTw99wcG+abgqf/jaJrufkDBc9bXvESgHRr59UROZ4SvppRnGBMU1RBnx"
+      },
+      "timeout": 60000
+    }
+  ],
+  "npmrc": "@vizexplorer:registry=https://npm.pkg.github.com",
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "patch": {
+    "enabled": false
+  },
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["react", "@types/react"],
+      "groupName": "react"
+    },
+    {
+      "matchPackageNames": ["react-dom", "@types/react-dom"],
+      "groupName": "react-dom"
+    },
+    {
+      "matchPackageNames": ["react-router-dom", "@types/react-router-dom"],
+      "groupName": "react-router-dom"
+    },
+    {
+      "matchPackagePatterns": ["jest"],
+      "groupName": "jest"
+    },
+    {
+      "matchPackagePatterns": ["react-input-mask"],
+      "groupName": "react-input-mask"
+    },
+    {
+      "matchPackagePatterns": ["marked"],
+      "groupName": "marked"
+    },
+    {
+      "matchPackagePatterns": ["^@vizexplorer/"],
+      "groupName": "vizexplorer"
+    },
+    {
+      "matchPackagePatterns": ["eslint", "prettier"],
+      "groupName": "eslint"
+    },
+    {
+      "matchPackageNames": ["@material-table/core"],
+      "allowedVersions": "<1"
+    },
+    {
+      "matchPackagePatterns": ["vite"],
+      "groupName": "vite"
+    },
+    {
+      "description": "Don't bump engines field in package.json",
+      "matchPackageNames": ["node"],
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "rangeStrategy": "auto"
+    }
+  ]
+}

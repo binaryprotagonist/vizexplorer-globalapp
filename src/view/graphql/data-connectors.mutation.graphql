@@ -1,0 +1,11 @@
+mutation odrDataConnectorCreate($input: OdrDataConnectorCreateInput!) {
+  odrDataConnectorCreate(input: $input) {
+    ...DataConnectorFields
+  }
+}
+
+mutation odrDataConnectorUpdate($input: OdrDataConnectorUpdateInput!) {
+  odrDataConnectorUpdate(input: $input) {
+    ...DataConnectorFields
+  }
+}

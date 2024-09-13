@@ -1,0 +1,1 @@
+export { adminApolloDefaultOptions } from "./config";

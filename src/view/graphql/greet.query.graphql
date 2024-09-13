@@ -1,0 +1,41 @@
+query greetRules($siteId: ID!) {
+  pdGreetRules(siteId: $siteId) {
+    ...GreetRule
+  }
+}
+
+query greetSections($siteId: ID!) {
+  pdGreetSections(siteId: $siteId) {
+    ...GreetSection
+  }
+}
+
+query greetRuleBuilderOrgData {
+  pdOrgSettings {
+    id
+    tiers {
+      ...LoyaltyTier
+    }
+  }
+  pdGreetMetrics {
+    ...GreetMetricDefinition
+  }
+  pdUserGroups {
+    ...GreetRuleUserGroup
+  }
+}
+
+query greetRuleBuilderSiteData($siteId: ID!) {
+  pdGreetRules(siteId: $siteId) {
+    ...GreetRule
+  }
+  pdGreetSections(siteId: $siteId) {
+    ...GreetSection
+  }
+}
+
+query greetSettings {
+  pdGreetSettings {
+    ...GreetSettings
+  }
+}

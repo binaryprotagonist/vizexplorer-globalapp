@@ -1,0 +1,11 @@
+query odrDataConnectors {
+  odrDataConnectors {
+    ...DataConnectorFields
+  }
+}
+
+query odrDataConnectorHostSites($id: ID!) {
+  connector: odrDataConnector(id: $id) {
+    ...DataConnectorHostSites
+  }
+}

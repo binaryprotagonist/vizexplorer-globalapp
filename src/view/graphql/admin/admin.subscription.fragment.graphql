@@ -1,0 +1,8 @@
+fragment SubscriptionPlan on SubscriptionPlan {
+  id
+  appId
+  appName
+  isOnprem
+  package
+  billingInterval
+}

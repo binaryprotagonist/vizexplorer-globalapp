@@ -1,0 +1,5 @@
+mutation odrDataSourceUpdate($input: OdrDataSourceUpdateInput!) {
+  odrDataSourceUpdate(input: $input) {
+    ...DataSourceFields
+  }
+}

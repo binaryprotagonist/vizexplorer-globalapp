@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Management Users Utils sortUsers sorts users 1`] = `
+[
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "1",
+          "name": "Zebra",
+        },
+      },
+    ],
+    "email": "Pingu.Craze@test.com",
+    "firstName": "Pingu",
+    "id": "987453",
+    "lastName": "Craze",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "ORG_ADMIN",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "3",
+          "name": "Kevin",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "1",
+          "name": "Zebra",
+        },
+      },
+    ],
+    "email": "Xeno.Lore@test.com",
+    "firstName": "Xeno",
+    "id": "7856",
+    "lastName": "Lore",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "viewer",
+          "name": "App Viewer",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "viewer",
+          "name": "App Viewer",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+    ],
+    "email": "Gale.Bush@test.com",
+    "firstName": "Gale",
+    "id": "17658",
+    "lastName": "Bush",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "viewer",
+          "name": "App Viewer",
+        },
+        "site": {
+          "id": "1",
+          "name": "Zebra",
+        },
+      },
+    ],
+    "email": "Erin.Woke@test.com",
+    "firstName": "Erin",
+    "id": "18674",
+    "lastName": "Woke",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+    ],
+    "email": "Ribbon.End@test.com",
+    "firstName": "Ribbon",
+    "id": "7283",
+    "lastName": "End",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+    ],
+    "email": "Unicorn.Bow@test.com",
+    "firstName": "Unicorn",
+    "id": "465610",
+    "lastName": "Bow",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "3",
+          "name": "Kevin",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "1",
+          "name": "Zebra",
+        },
+      },
+    ],
+    "email": "Unicorn.Bow@test.com",
+    "firstName": "Unicorn",
+    "id": "16875",
+    "lastName": "Bow",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "viewer",
+          "name": "App Viewer",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+      {
+        "app": {
+          "id": "sras",
+          "name": "Slot Reports",
+        },
+        "role": {
+          "id": "viewer",
+          "name": "App Viewer",
+        },
+        "site": {
+          "id": "3",
+          "name": "Kevin",
+        },
+      },
+    ],
+    "email": "Hollywood.Key@test.com",
+    "firstName": "Hollywood",
+    "id": "87654",
+    "lastName": "Key",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "2",
+          "name": "Apple",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "4",
+          "name": "Cat",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "3",
+          "name": "Kevin",
+        },
+      },
+      {
+        "app": {
+          "id": "sre",
+          "name": "Slot Recommendation Engine",
+        },
+        "role": {
+          "id": "admin",
+          "name": "App Admin",
+        },
+        "site": {
+          "id": "1",
+          "name": "Zebra",
+        },
+      },
+    ],
+    "email": "Unicorn.Bow@test.com",
+    "firstName": "Unicorn",
+    "id": "16875",
+    "lastName": "Bow",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [],
+    "email": "Zues.Pony@test.com",
+    "firstName": "Zues",
+    "id": "5738",
+    "lastName": "Pony",
+    "phone": "+1 123 321",
+  },
+  {
+    "accessLevel": "NO_ACCESS",
+    "accessList": [],
+    "email": "Robert.Williams@test.com",
+    "firstName": "Robert",
+    "id": "8345",
+    "lastName": "Williams",
+    "phone": "+1 922 308",
+  },
+  {
+    "accessLevel": "APP_SPECIFIC",
+    "accessList": [],
+    "email": "",
+    "firstName": "James",
+    "id": "9176",
+    "lastName": "Smith",
+    "phone": "+1 423 902",
+  },
+]
+`;

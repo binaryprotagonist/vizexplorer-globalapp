@@ -1,0 +1,47 @@
+query currentOrgSummary {
+  currentOrg {
+    ...OrgSummary
+    dataAdapterAllowed
+  }
+}
+
+query orgDataAdapterEnabled {
+  org: currentOrg {
+    id
+    dataAdapterEnabled
+  }
+}
+
+query orgStageDatabase {
+  org: currentOrg {
+    id
+    dataAdapter {
+      id
+      stageDb {
+        host
+        port
+        databaseName
+        username
+        password
+      }
+    }
+  }
+}
+
+query orgSitesMapping {
+  org: currentOrg {
+    id
+    sites {
+      ...SiteMapping
+    }
+  }
+}
+
+query orgSitesDatasources {
+  org: currentOrg {
+    id
+    sites {
+      ...SiteDatasource
+    }
+  }
+}

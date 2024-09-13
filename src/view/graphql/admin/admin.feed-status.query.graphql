@@ -1,0 +1,11 @@
+query dataFeedStatus {
+  dataFeedStatus {
+    maxDate
+  }
+}
+
+query dataFeedSourceSiteIds {
+  dataFeedStatus {
+    sourceSiteIds
+  }
+}

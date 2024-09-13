@@ -1,0 +1,13 @@
+query getSites {
+  sites {
+    ...Site
+  }
+}
+
+query nativeHostIdsForSite($siteId: Int!) {
+  site(id: $siteId) {
+    id: idV2
+    name
+    pdNativeHostIds
+  }
+}

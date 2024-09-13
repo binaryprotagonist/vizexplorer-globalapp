@@ -1,0 +1,9 @@
+mutation heatmapAssociate($input: OrgHeatMapCreateInput!) {
+  orgHeatmapAdd(input: $input) {
+    ...OrgHeatMap
+  }
+}
+
+mutation heatmapDeleteAssociation($id: ID!) {
+  orgHeatmapDelete(id: $id)
+}

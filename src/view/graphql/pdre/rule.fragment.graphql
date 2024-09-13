@@ -1,0 +1,12 @@
+fragment PdreRule on PdRule {
+  id
+  code
+  siteId
+  name
+  description
+  config {
+    id
+    enabled
+    weight
+  }
+}

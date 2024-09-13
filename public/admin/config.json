@@ -1,0 +1,13 @@
+{
+  "pendo": {
+    "enabled": false,
+    "apiKey": "8b8347d5-a5eb-4982-54a0-846e09e927e1",
+    "account": {
+      "id": "VODAdmin",
+      "name": "VizOndemand Admin"
+    }
+  },
+  "sisense": {
+    "url": "https://apps.vizexplorer.dev/odr"
+  }
+}

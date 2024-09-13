@@ -1,0 +1,17 @@
+mutation orgLicenseCreate {
+  orgLicenseCreate {
+    ...OrgLicense
+  }
+}
+
+mutation orgLicenseEnable($input: LicenseEnableInput!) {
+  orgLicenseEnable(input: $input) {
+    ...OrgLicense
+  }
+}
+
+mutation orgLicenseDisable($input: LicenseDisableInput!) {
+  orgLicenseDisable(input: $input) {
+    ...OrgLicense
+  }
+}

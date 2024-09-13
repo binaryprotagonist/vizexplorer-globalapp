@@ -1,0 +1,7 @@
+mutation pdreRuleConfigUpdate($input: PdRuleConfigUpdateInput!) {
+  pdreRuleConfigUpdate: pdRuleConfigUpdate(input: $input) {
+    id
+    enabled
+    weight
+  }
+}

@@ -1,0 +1,5 @@
+query orgLicenses {
+  orgLicenses {
+    ...OrgLicense
+  }
+}

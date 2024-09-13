@@ -1,0 +1,14 @@
+mutation orgLoyaltyTiersUpdate($input: [PdTierInput!]) {
+  pdOrgSettingsUpdate(input: { tiers: $input }) {
+    id
+    tiers {
+      ...LoyaltyTier
+    }
+  }
+}
+
+mutation companyUpdate($input: CompanyInput!) {
+  companyUpdate(input: $input) {
+    ...CompanyUpdateOutput
+  }
+}

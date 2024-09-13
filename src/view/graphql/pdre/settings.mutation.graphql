@@ -1,0 +1,6 @@
+mutation updatePdreSettings($input: PdOrgSettingsInput!) {
+  pdOrgSettingsUpdate(input: $input) {
+    id
+    ...PdreSettings
+  }
+}

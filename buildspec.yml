@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18.x
+  pre_build:
+    commands:
+      - npm install -g npm@7
+      - echo Loggin in to Docker Hub...
+      - aws secretsmanager get-secret-value --secret-id docker-hub/credentials --region us-east-1 |jq -r '.SecretString' |jq -r '.access_token' | docker login --username $DOCKER_HUB_LOGIN --password-stdin
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $IMAGE_REPO
+      - echo Getting secret for GitHub Packages...
+      - aws secretsmanager get-secret-value --secret-id github-packages/npmrc --region us-east-1 | jq -r '.SecretString' > .npmrc
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      - npm run lint
+      - npm run build
+      - npm test
+      - echo Building the Docker image...
+      - export IMAGE_TAG=$(expr substr ${CODEBUILD_RESOLVED_SOURCE_VERSION} 1 7)
+      - docker build -t $IMAGE_REPO/global/app:$IMAGE_TAG .
+      - docker push $IMAGE_REPO/global/app:$IMAGE_TAG
+      - echo Start Admin App Build
+      - export VITE_ENABLE_ADMIN=true
+      - npm run build:admin
+      - docker build -t $IMAGE_REPO/admin/ui:$IMAGE_TAG -f Dockerfile.admin .
+      - docker push $IMAGE_REPO/admin/ui:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`

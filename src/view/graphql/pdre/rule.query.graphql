@@ -1,0 +1,5 @@
+query pdreRules($siteId: ID!) {
+  pdreRules: pdRules(siteId: $siteId) {
+    ...PdreRule
+  }
+}

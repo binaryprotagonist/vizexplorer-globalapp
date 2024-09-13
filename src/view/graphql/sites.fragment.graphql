@@ -1,0 +1,8 @@
+fragment Site on Site {
+  id: idV2
+  name
+  currency {
+    code
+  }
+  tz
+}

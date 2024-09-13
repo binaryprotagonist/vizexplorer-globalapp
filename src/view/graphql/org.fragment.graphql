@@ -1,0 +1,33 @@
+fragment LoyaltyTier on PdTier {
+  id
+  name
+  order
+  color: cssColor
+}
+
+fragment GaCompany on Company {
+  id
+  name
+  email
+  ...GaCompanyAddress
+}
+
+fragment GaCompanyAddress on Company {
+  id
+  address {
+    phone
+    country
+    region
+    city
+    street1
+    street2
+    postalCode
+  }
+}
+
+fragment CompanyUpdateOutput on Company {
+  id
+  name
+  email
+  ...GaCompanyAddress
+}

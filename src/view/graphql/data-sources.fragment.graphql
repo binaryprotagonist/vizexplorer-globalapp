@@ -1,0 +1,20 @@
+fragment DataSourceFields on OdrDataSource {
+  id
+  app {
+    id
+    name
+  }
+  site {
+    id: idV2
+    name
+  }
+  connector {
+    id
+    name
+  }
+  connectorParams {
+    ... on OdrHostVizParams {
+      siteId
+    }
+  }
+}

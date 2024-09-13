@@ -1,0 +1,15 @@
+mutation createSite($input: SiteCreateInput!) {
+  siteCreateV2(input: $input) {
+    ...Site
+  }
+}
+
+mutation updateSite($id: ID!, $site: SiteUpdate!) {
+  siteUpdate(idV2: $id, site: $site) {
+    ...Site
+  }
+}
+
+mutation deleteSite($id: ID!) {
+  siteDelete(idV2: $id)
+}

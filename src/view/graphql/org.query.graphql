@@ -1,0 +1,26 @@
+query currentOrgFeatures {
+  currentOrg {
+    id
+    features {
+      multiProperties
+    }
+  }
+}
+
+query orgLoyaltyTiers {
+  pdOrgSettings {
+    id
+    tiers {
+      ...LoyaltyTier
+    }
+  }
+}
+
+query company {
+  currentOrg {
+    id
+    company {
+      ...GaCompany
+    }
+  }
+}

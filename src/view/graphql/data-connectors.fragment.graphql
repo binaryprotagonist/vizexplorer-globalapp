@@ -1,0 +1,27 @@
+fragment DataConnectorFields on OdrDataConnector {
+  id
+  name
+  params {
+    ... on OdrMssqlParams {
+      hostname
+      port
+      database
+      username
+      tlsEnabled
+    }
+  }
+  dataRefreshTime {
+    ...DataRefreshTime
+  }
+}
+
+fragment DataConnectorHostSites on OdrDataConnector {
+  id
+  hostVizSiteIds
+}
+
+fragment DataRefreshTime on OdrDataRefreshTime {
+  hour
+  minute
+  timezone
+}

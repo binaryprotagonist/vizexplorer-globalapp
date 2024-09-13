@@ -1,0 +1,5 @@
+query applicationSubscriptions {
+  appSubscriptions: applications {
+    ...AppSubscription
+  }
+}

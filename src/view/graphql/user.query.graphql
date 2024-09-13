@@ -1,0 +1,15 @@
+query emailExists($email: String!) {
+  emailExists(email: $email)
+}
+
+query currentUserMfa {
+  currentUser {
+    ...GaCurrentUserMfa
+  }
+}
+
+query currentUser {
+  currentUser {
+    ...GaUser
+  }
+}

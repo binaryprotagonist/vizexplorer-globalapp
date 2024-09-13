@@ -1,0 +1,13 @@
+fragment HeatMapInventory on HeatMap {
+  id
+  uploadedAt
+  attributes
+}
+
+fragment OrgHeatMap on OrgHeatMap {
+  id
+  floorId
+  sourceSiteId
+  effectiveFrom
+  heatMapId
+}

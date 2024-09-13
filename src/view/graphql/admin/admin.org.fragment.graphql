@@ -1,0 +1,8 @@
+fragment OrgSummary on Org {
+  id
+  company {
+    id
+    name
+    email
+  }
+}

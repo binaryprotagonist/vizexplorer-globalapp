@@ -1,0 +1,36 @@
+fragment GaUserFields on User {
+  id
+  firstName
+  lastName
+  email
+  phone
+}
+
+fragment GaAccessList on UserAppAccess {
+  app {
+    id
+    name
+  }
+  role {
+    id
+    name
+  }
+  site {
+    id: idV2
+    name
+  }
+}
+
+fragment GaUser on User {
+  ...GaUserFields
+  accessLevel
+  accessList {
+    ...GaAccessList
+  }
+  mfa
+}
+
+fragment GaCurrentUserMfa on User {
+  id
+  mfa
+}

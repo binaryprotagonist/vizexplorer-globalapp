@@ -1,0 +1,17 @@
+fragment SiteMapping on Site {
+  id
+  name
+  dataFeedMapping {
+    id
+    sourceSiteId
+  }
+}
+
+fragment SiteDatasource on Site {
+  id
+  name
+  slotDataSource {
+    id
+    type
+  }
+}

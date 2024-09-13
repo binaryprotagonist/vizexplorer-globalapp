@@ -1,0 +1,9 @@
+mutation userProfileUpdate($user: UserProfileInput!) {
+  userProfileUpdate(user: $user) {
+    ...GaUser
+  }
+}
+
+mutation userPasswordReset($user: UserPasswordResetInput!) {
+  userPasswordReset(user: $user)
+}

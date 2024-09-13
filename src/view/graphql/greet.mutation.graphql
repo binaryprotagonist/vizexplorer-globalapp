@@ -1,0 +1,27 @@
+mutation greetRulesPriorityUpdate($ruleIds: [ID!]!, $siteId: ID!) {
+  pdGreetRulesPriorityUpdate(ruleIds: $ruleIds, siteId: $siteId) {
+    ...GreetRule
+  }
+}
+
+mutation greetRuleCreate($input: PdGreetRuleCreateInput!) {
+  pdGreetRuleCreate(input: $input) {
+    ...GreetRule
+  }
+}
+
+mutation pdGreetRuleUpdate($input: PdGreetRuleUpdateInput!) {
+  pdGreetRuleUpdate(input: $input) {
+    ...GreetRule
+  }
+}
+
+mutation greetRuleDelete($id: ID!, $siteId: ID!) {
+  pdGreetRuleDelete(id: $id, siteId: $siteId)
+}
+
+mutation greetSettingsUpdate($input: PdGreetSettingsUpdateInput!) {
+  pdGreetSettingsUpdate(input: $input) {
+    ...GreetSettings
+  }
+}

@@ -1,0 +1,12 @@
+fragment PdreSettings on PdOrgSettings {
+  valueMetric
+  lookbackDays
+  maxTasksPerHost
+  maxTasksPerView
+  taskScheduler {
+    id
+    hour
+    minute
+    timezone
+  }
+}

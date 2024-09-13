@@ -1,0 +1,17 @@
+fragment AppSubscription on Application {
+  id
+  name
+  subscription {
+    ...Subscription
+  }
+}
+
+fragment Subscription on AppSubscription {
+  id
+  isOnprem
+  package
+  periodStartDate
+  periodEndDate
+  status
+  isValid
+}

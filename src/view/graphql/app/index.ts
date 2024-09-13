@@ -1,0 +1,1 @@
+export { appApolloCacheConfig } from "./config";

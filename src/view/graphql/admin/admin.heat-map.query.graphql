@@ -1,0 +1,17 @@
+query heatMapInventory($siteId: ID!) {
+  heatMapInventory(siteId: $siteId) {
+    ...HeatMapInventory
+  }
+}
+
+query heatMapInventorySearch($keyword: String!) {
+  heatMapInventorySearch(keyword: $keyword) {
+    ...HeatMapInventory
+  }
+}
+
+query orgHeatmaps {
+  orgHeatMaps {
+    ...OrgHeatMap
+  }
+}

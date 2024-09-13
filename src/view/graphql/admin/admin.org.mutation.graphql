@@ -1,0 +1,18 @@
+mutation orgFeaturesUpdate($input: OrgFeaturesUpdateInput!) {
+  orgFeaturesUpdate(input: $input) {
+    multiProperties
+  }
+}
+
+mutation dataAdapterEnable {
+  dataAdapterEnable {
+    id
+  }
+}
+
+mutation siteMappingUpdate($input: FeedSiteMappingUpdateInput!) {
+  feedSiteMappingUpdate(input: $input) {
+    id
+    sourceSiteId
+  }
+}
